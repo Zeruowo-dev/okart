@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Meno Banner";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("https://makenordic.com/cdn/shop/files/MenoBannerRegular.woff2?v=6732002665930671255") format("woff2"),
+    url("https://makenordic.com/cdn/shop/files/MenoBannerRegular.woff?v=9458111653346525411") format("woff");
+}
+
+@font-face {
+  font-family: "Avenir Next Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url("https://makenordic.com/cdn/shop/files/AvenirNextProRegular.woff2?v=9156172520085134785") format("woff2"),
+    url("https://makenordic.com/cdn/shop/files/AvenirNextProRegular.woff?v=824519730630218682") format("woff");
+}
+
+@font-face {
+  font-family: "Avenir Next Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    url("https://makenordic.com/cdn/shop/files/AvenirNextProDemi.woff2?v=16902809695600975381") format("woff2"),
+    url("https://makenordic.com/cdn/shop/files/AvenirNextProDemi.woff?v=16094329590509339985") format("woff");
+}
+
+:root {
+  --font-stack-headlines: "Meno Banner", "Cormorant Garamond", Georgia, serif;
+  --font-stack-body: "Avenir Next Pro", "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --grey-01: #bfbcb4;
+  --grey-02: #e1e0dd;
+  --grey-03: #f0efed;
+  --grey-04: #f6f5f3;
+  --grey-05: #c4c3c1;
+
+  --brown-01: #2b1e12;
+  --brown-02: #4f3926;
+  --brown-03: #82674f;
+  --brown-04: #d2af8a;
+  --brown-05: #eee8de;
+
+  --cream-accent: #ede5d5;
+  --cream-accent-hover: #dfd2bc;
+  --cream-border: #b9a78b;
+
+  --green-01: #4b4c1e;
+  --green-02: #777859;
+  --green-03: #b1b296;
+  --green-04: #dbdcc6;
+  --green-05: #f6f6f1;
+
+  --text-primary: #1c1c1c;
+  --background-primary: #f6f5f3;
+  --background-secondary: #ffffff;
+  --border-color: #d5d4d3;
+  --button-border-radius: 48px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    font-family: var(--font-stack-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    font-family: var(--font-stack-body);
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  .font-serif-display {
+    font-family: var(--font-stack-headlines);
+    font-weight: 400;
+  }
+}
+
+.font-serif-display {
+  font-family: var(--font-stack-headlines);
+}
+
+.font-sans-body {
+  font-family: var(--font-stack-body);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Hide scrollbars cleanly on horizontal tracks */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
